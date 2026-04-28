@@ -38,7 +38,11 @@ export function Testimonials() {
             Client Success Stories
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground">
+<<<<<<< HEAD
             Trusted by Leading Brands
+=======
+            Trusted by Successful Online Businesses
+>>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
           </h2>
         </div>
 

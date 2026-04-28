@@ -2,7 +2,11 @@
 
 import * as React from 'react'
 import { Command as CommandPrimitive } from 'cmdk'
+<<<<<<< HEAD
 import { SearchIcon } from 'lucide-react'
+=======
+import { Search as SearchIcon } from 'lucide-react'
+>>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
 
 import { cn } from '@/lib/utils'
 import {

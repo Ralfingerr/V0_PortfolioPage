@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
+<<<<<<< HEAD
 import { ChevronRight, MoreHorizontal } from 'lucide-react'
+=======
+import { ChevronRight, MoveHorizontal as MoreHorizontal } from 'lucide-react'
+>>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
 
 import { cn } from '@/lib/utils'
 

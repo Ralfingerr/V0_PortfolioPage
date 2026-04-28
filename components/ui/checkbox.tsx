@@ -2,7 +2,11 @@
 
 import * as React from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
+<<<<<<< HEAD
 import { CheckIcon } from 'lucide-react'
+=======
+import { Check as CheckIcon } from 'lucide-react'
+>>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
 
 import { cn } from '@/lib/utils'
 

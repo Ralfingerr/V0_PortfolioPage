@@ -127,5 +127,16 @@
   .glass-hover:hover {
     background: rgba(34, 31, 30, 0.8);
     border-color: rgba(198, 124, 78, 0.3);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+  }
+  .section-divider {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    opacity: 0.5;
+  }
+
+  .bg-alternate {
+    background-color: oklch(0.15 0.005 285 / 0.5);
   }
 }

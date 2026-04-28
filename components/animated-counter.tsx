@@ -56,16 +56,9 @@ export function AnimatedCounter({
     return () => observer.disconnect()
   }, [end, duration, hasAnimated])
 
-<<<<<<< HEAD
   const displayValue = decimals > 0 
     ? count.toFixed(decimals) 
-    : Math.round(count).toLocaleString()
-=======
-  const roundedCount = Math.round(count)
-  const displayValue = decimals > 0 
-    ? count.toFixed(decimals) 
-    : roundedCount.toLocaleString('de-DE')
->>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
+    : Math.round(count).toLocaleString('de-DE')
 
   return (
     <span ref={ref} className="tabular-nums">

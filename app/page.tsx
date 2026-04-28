@@ -7,28 +7,55 @@ import { Testimonials } from "@/components/testimonials"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { FloatingElements } from "@/components/floating-elements"
-<<<<<<< HEAD
-=======
 import { CustomCursor } from "@/components/custom-cursor"
 import { SectionIndicator } from "@/components/section-indicator"
->>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
+
+import { TrustSignals } from "@/components/trust-signals"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
-<<<<<<< HEAD
-=======
       <CustomCursor />
       <SectionIndicator />
->>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
       <FloatingElements />
       <Navigation />
-      <Hero />
-      <About />
-      <SocialProof />
-      <BentoGrid />
-      <Testimonials />
-      <ContactSection />
+      
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <TrustSignals />
+
+      <div className="section-divider" />
+
+      <section id="about" className="bg-alternate">
+        <About />
+      </section>
+
+      <div className="section-divider" />
+
+      <section id="social-proof">
+        <SocialProof />
+      </section>
+
+      <div className="section-divider" />
+
+      <section id="work" className="bg-alternate">
+        <BentoGrid />
+      </section>
+
+      <div className="section-divider" />
+
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+
+      <div className="section-divider" />
+
+      <section id="contact" className="bg-alternate">
+        <ContactSection />
+      </section>
+
       <Footer />
     </main>
   )

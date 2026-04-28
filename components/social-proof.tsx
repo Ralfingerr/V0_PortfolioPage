@@ -5,7 +5,6 @@ import { Zap, TrendingUp, Users } from "lucide-react"
 const stats = [
   {
     icon: Zap,
-<<<<<<< HEAD
     value: 150,
     suffix: "+",
     label: "Automations Delivered",
@@ -23,23 +22,6 @@ const stats = [
     value: 50,
     suffix: "+",
     label: "Brands Transformed",
-=======
-    value: 100,
-    suffix: "+",
-    label: "Successful Projects",
-  },
-  {
-    icon: TrendingUp,
-    value: 500000,
-    prefix: "€",
-    label: "Revenue Attributed to Email Marketing",
-  },
-  {
-    icon: Users,
-    value: 25,
-    suffix: "+",
-    label: "Business Supported",
->>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
   },
 ]
 

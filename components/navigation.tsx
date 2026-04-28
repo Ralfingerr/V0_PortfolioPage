@@ -6,10 +6,7 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-<<<<<<< HEAD
-=======
   { href: "#about", label: "About" },
->>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
   { href: "#work", label: "Work" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
@@ -19,10 +16,16 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+
+      // Calculate scroll progress
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight
+      const progress = (window.scrollY / totalHeight) * 100
+      setScrollProgress(progress)
 
       // Detect active section
       const sections = navLinks.map(link => link.href.substring(1))
@@ -30,7 +33,7 @@ export function Navigation() {
         const element = document.getElementById(section)
         if (element) {
           const rect = element.getBoundingClientRect()
-          if (rect.top <= 100) {
+          if (rect.top <= 150) {
             setActiveSection(section)
           }
         }
@@ -44,7 +47,14 @@ export function Navigation() {
     setIsMobileMenuOpen(false)
     const element = document.querySelector(href)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const offset = 80 // Offset for sticky header
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
     }
   }
 
@@ -53,7 +63,7 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "glass py-4" 
+          ? "glass py-4 shadow-lg shadow-black/20" 
           : "bg-transparent py-6"
       )}
     >
@@ -75,7 +85,7 @@ export function Navigation() {
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
                 className={cn(
-                  "text-sm font-medium transition-all relative",
+                  "text-sm font-medium transition-all relative px-1 py-2",
                   isActive
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
@@ -83,12 +93,12 @@ export function Navigation() {
               >
                 {link.label}
                 {isActive && (
-                  <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/50 to-primary rounded-full" />
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/50 to-primary rounded-full" />
                 )}
               </button>
             )
           })}
-          <BookCallButton variant="outline" size="sm" />
+          <BookCallButton variant="premium" size="sm" />
         </div>
 
         {/* Mobile Menu Button */}
@@ -101,20 +111,28 @@ export function Navigation() {
         </button>
       </nav>
 
+      {/* Scroll Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-[2px] bg-primary/30 w-full overflow-hidden">
+        <div 
+          className="h-full bg-primary transition-all duration-100 ease-out" 
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass mt-2 mx-4 rounded-xl p-6">
+        <div className="md:hidden glass mt-2 mx-4 rounded-xl p-6 shadow-2xl">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors text-left py-2"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left py-2 font-medium"
               >
                 {link.label}
               </button>
             ))}
-            <BookCallButton variant="default" size="default" className="mt-2" />
+            <BookCallButton variant="premium" size="default" className="mt-2 w-full" />
           </div>
         </div>
       )}

@@ -6,11 +6,7 @@ import { BookCallButton } from "@/components/book-call-button"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-<<<<<<< HEAD
 import { Linkedin, Mail, Send, CheckCircle } from "lucide-react"
-=======
-import { Linkedin, Mail, Send, CircleCheck as CheckCircle } from "lucide-react"
->>>>>>> 1337abdd1407078c225f6278b612a686a0f63a9c
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)

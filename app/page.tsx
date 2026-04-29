@@ -7,15 +7,16 @@ import { Testimonials } from "@/components/testimonials"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { FloatingElements } from "@/components/floating-elements"
-import { CustomCursor } from "@/components/custom-cursor"
 import { SectionIndicator } from "@/components/section-indicator"
 
 import { TrustSignals } from "@/components/trust-signals"
+import { Atmosphere } from "@/components/atmosphere"
+import { ROICalculator } from "@/components/roi-calculator"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <CustomCursor />
+    <main className="min-h-screen bg-background overflow-x-hidden">
+      <Atmosphere />
       <SectionIndicator />
       <FloatingElements />
       <Navigation />
@@ -43,6 +44,10 @@ export default function Home() {
       <section id="work" className="bg-alternate">
         <BentoGrid />
       </section>
+
+      <div className="section-divider" />
+
+      <ROICalculator />
 
       <div className="section-divider" />
 

@@ -101,10 +101,32 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 duration-300;
   }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground relative;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.03;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("https://res.cloudinary.com/dzif7to70/image/upload/v1689163212/noise_fcc89b.png");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-[-0.02em] leading-tight;
+  }
+
+  p {
+    @apply leading-relaxed tracking-normal;
   }
 }
 

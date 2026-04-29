@@ -8,6 +8,8 @@ import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
+import { ProjectSidePanel } from "@/components/project-side-panel"
+
 const CATEGORIES = ["All", "Websites", "Emails", "Automation", "Certificates"]
 
 const portfolioItems = [
@@ -21,6 +23,15 @@ const portfolioItems = [
     url: "https://bio-theke.de",
     metric: "+45% Retention",
     highlight: true,
+    details: {
+      challenge: "High customer acquisition costs with low repeat purchase rates in the organic fresh food niche.",
+      solution: "Building a post-purchase automation ecosystem that educates customers on quality while offering timely subscriptions.",
+      results: [
+        "Boosted customer retention rate by 45% within 6 months.",
+        "Created 3 automated segment flows tailored to seasonal meat preferences.",
+        "Email marketing now accounts for 28% of total monthly revenue."
+      ]
+    }
   },
   {
     id: "p2",
@@ -32,6 +43,15 @@ const portfolioItems = [
     url: "https://maleup.de",
     metric: "40%+ Repeat Orders",
     highlight: true,
+    details: {
+      challenge: "Men's skincare is highly transactional; the brand struggled to build a loyal 'routine-based' community.",
+      solution: "AI-powered replenishment flows based on product usage time and personalized skincare quiz content.",
+      results: [
+        "40%+ Increase in repeat purchase orders over 4 months.",
+        "Successfully implemented an AI quiz-to-upsell flow converting at 18%.",
+        "Redesign of transactional emails improved brand sentiment (NPS lift)."
+      ]
+    }
   },
   {
     id: "p3",
@@ -43,6 +63,15 @@ const portfolioItems = [
     url: "https://buffalo-jerky.de",
     metric: "+774% YoY ROI",
     highlight: false,
+    details: {
+      challenge: "Scaling sales during peak holiday periods without relying solely on deep discounting.",
+      solution: "A 'Value-First' Black Friday strategy combining education, scarcity, and automated VIP early access.",
+      results: [
+        "Generated €40k+ revenue during Black Friday weekend.",
+        "Email channel ROI increased by 774% year-over-year.",
+        "Highest engagement rate in brand history (52% open rate)."
+      ]
+    }
   },
   {
     id: "c1",
@@ -89,6 +118,7 @@ const portfolioItems = [
 export function BentoGrid() {
   const [activeFilter, setActiveFilter] = useState("All")
   const [selectedCertificate, setSelectedCertificate] = useState<string | null>(null)
+  const [selectedProject, setSelectedProject] = useState<typeof portfolioItems[0] | null>(null)
 
   const filteredItems = useMemo(() => {
     if (activeFilter === "All") return portfolioItems
@@ -143,9 +173,15 @@ export function BentoGrid() {
                 )}
               >
                 <GlassCard 
-                  className="h-full overflow-hidden group flex flex-col"
+                  className="h-full overflow-hidden group flex flex-col cursor-pointer"
                   hover
-                  onClick={() => item.category === "Certificates" && setSelectedCertificate(item.id)}
+                  onClick={() => {
+                    if (item.category === "Certificates") {
+                      setSelectedCertificate(item.id)
+                    } else {
+                      setSelectedProject(item)
+                    }
+                  }}
                 >
                   <div className={cn(
                     "relative overflow-hidden bg-muted",
@@ -268,6 +304,12 @@ export function BentoGrid() {
           </p>
           <BookCallButton size="lg" className="px-10 h-14 text-lg" />
         </div>
+
+        <ProjectSidePanel 
+          isOpen={!!selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+          project={selectedProject} 
+        />
       </div>
     </section>
   )

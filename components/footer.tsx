@@ -13,8 +13,15 @@ export function Footer() {
             <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
               Ralf Hillebrand
             </h3>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Available for Q4 Projects</span>
+            </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              E-commerce AI & Automation Architect. Helping brands scale through intelligent automation systems.
+              Scale your D2C brand with AI-powered email marketing and intelligent automation systems. Helping brands unlock untapped revenue through data.
             </p>
             <div className="flex gap-4">
               <a 

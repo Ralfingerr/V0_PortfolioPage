@@ -36,20 +36,20 @@ This document outlines the Phase 2 strategy for elevating the portfolio from "pr
 
 ## 🛠 Progress Checklist
 
-### Phase 1: Atmosphere & Clean-up
-- [ ] **[TASK-01]** Remove `CustomCursor` and restore standard pointer.
-- [ ] **[TASK-02]** Add background "blobs" and global noise texture.
+### Phase 1: Atmosphere & Clean-up (DONE)
+- [x] **[TASK-01]** Remove `CustomCursor` and restore standard pointer.
+- [x] **[TASK-02]** Add background "blobs" and global noise texture.
 
-### Phase 2: High-End Typography
-- [ ] **[TASK-03]** Refine kerning/leading and implement staggered text reveal animations.
+### Phase 2: High-End Typography (DONE)
+- [x] **[TASK-03]** Refine kerning/leading and implement staggered text reveal animations.
 
-### Phase 3: Interactive Lead Magnets
-- [ ] **[TASK-04]** Build the "Revenue Lift" ROI Calculator module.
-- [ ] **[TASK-05]** Implement the side-panel "deep dive" for portfolio items.
+### Phase 3: Interactive Lead Magnets (DONE)
+- [x] **[TASK-04]** Build the "Revenue Lift" ROI Calculator module.
+- [x] **[TASK-05]** Implement the side-panel "deep dive" for portfolio items.
 
-### Phase 4: Reactive Micro-Interactions
-- [ ] **[TASK-06]** Add magnetic effect to primary `BookCallButton` components.
+### Phase 4: Reactive Micro-Interactions (DONE)
+- [x] **[TASK-06]** Add magnetic effect to primary `BookCallButton` components.
 
-### Phase 5: Final Polish
-- [ ] **[TASK-07]** Add live availability indicator to Nav/Footer.
-- [ ] **[TASK-08]** Final performance audit & layout shift (CLS) check.
+### Phase 5: Final Polish (DONE)
+- [x] **[TASK-07]** Add live availability indicator to Nav/Footer.
+- [x] **[TASK-08]** Final performance audit & layout shift (CLS) check.

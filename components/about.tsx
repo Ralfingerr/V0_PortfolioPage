@@ -5,8 +5,8 @@ import { Trophy, Clock, ShieldCheck, Mail, Target, ArrowRight } from "lucide-rea
 
 export function About() {
   const highlights = [
-    { icon: <Trophy className="h-5 w-5" />, label: "50+ Brands Helped" },
-    { icon: <Clock className="h-5 w-5" />, label: "8 Years Experience" },
+    { icon: <Trophy className="h-5 w-5" />, label: "20+ clients supported" },
+    { icon: <Clock className="h-5 w-5" />, label: "5+ years experience" },
     { icon: <ShieldCheck className="h-5 w-5" />, label: "Certified Expert" },
   ]
 

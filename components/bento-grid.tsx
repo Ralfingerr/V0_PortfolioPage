@@ -4,19 +4,19 @@ import { GlassCard } from "@/components/glass-card"
 import { BookCallButton } from "@/components/book-call-button"
 import { ArrowUpRight, Award, ExternalLink, Filter, TrendingUp, Search } from "lucide-react"
 import Image from "next/image"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 import { ProjectSidePanel } from "@/components/project-side-panel"
 
-const CATEGORIES = ["All", "Websites", "Emails", "Automation", "Certificates"]
+const CATEGORIES = ["All", "Websites & Content", "Emails", "Automation", "Certificates"]
 
 const portfolioItems = [
   {
     id: "p1",
-    type: "Websites",
-    category: "Websites",
+    type: "Websites & Content",
+    category: "Websites & Content",
     title: "Biotheke",
     description: "Organic meat e-commerce store with email marketing automation and customer retention flows.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-bio-theke-de-2026-03-20-14_25_42.png-wXgmtroSThY1LVzO6WUDSOiFGnhELj.jpeg",
@@ -35,8 +35,8 @@ const portfolioItems = [
   },
   {
     id: "p2",
-    type: "Automation",
-    category: "Automation",
+    type: "Websites & Content",
+    category: "Websites & Content",
     title: "maleup",
     description: "Men's skincare brand with AI-powered content and email sequences driving repeat purchases.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-maleup-de-products-instant-repair-2026-03-11-21_15_11.png-pl05vIQdN6fBUvJ2shInM4YWTBCgI1.jpeg",
@@ -70,6 +70,63 @@ const portfolioItems = [
         "Generated €40k+ revenue during Black Friday weekend.",
         "Email channel ROI increased by 774% year-over-year.",
         "Highest engagement rate in brand history (52% open rate)."
+      ]
+    }
+  },
+  {
+    id: "p4",
+    type: "Automation",
+    category: "Automation",
+    title: "AI Workflow Integration",
+    description: "Custom AI-driven automation for content creation and distribution workflows.",
+    image: "/images/portfolio/automation-new.jpg",
+    metric: "80% Time Saved",
+    highlight: false,
+    details: {
+      challenge: "Manual content distribution across multiple channels was consuming 20+ hours per week.",
+      solution: "Building an AI-powered automation that formats, schedules, and adapts content for each platform automatically.",
+      results: [
+        "Reduced weekly manual work by 80%.",
+        "Increased posting frequency by 3x.",
+        "Improved consistency across all digital touchpoints."
+      ]
+    }
+  },
+  {
+    id: "p5",
+    type: "Emails",
+    category: "Emails",
+    title: "Gmail Campaign Suite",
+    description: "Highly optimized Gmail-native email designs for maximum deliverability and engagement.",
+    image: "/images/portfolio/screencapture-mail-google-mail-u-3-2026-05-11-12_00_54.png",
+    metric: "99% Deliverability",
+    highlight: false,
+    details: {
+      challenge: "Low deliverability rates and poor rendering across different email clients.",
+      solution: "Development of a lightweight, Gmail-optimized template system focused on text-to-image ratios.",
+      results: [
+        "Consistent 99%+ deliverability rates.",
+        "Increased click-through rates by 15% through cleaner design.",
+        "Zero reported rendering issues in Gmail mobile app."
+      ]
+    }
+  },
+  {
+    id: "p6",
+    type: "Emails",
+    category: "Emails",
+    title: "Black Friday Campaign",
+    description: "Strategic Black Friday email campaign with high-converting layouts and urgency-driven design.",
+    image: "/images/portfolio/BlackFriday_EmailKampagne.png",
+    metric: "+120% Sales Lift",
+    highlight: false,
+    details: {
+      challenge: "Cutting through the noise of the busiest shopping weekend of the year.",
+      solution: "A multi-stage email sequence using dynamic countdown timers and personalized offer blocks.",
+      results: [
+        "120% lift in sales compared to previous year.",
+        "Highest single-day revenue in brand history.",
+        "Average open rate of 42% throughout the campaign."
       ]
     }
   },
@@ -117,13 +174,30 @@ const portfolioItems = [
 
 export function BentoGrid() {
   const [activeFilter, setActiveFilter] = useState("All")
+  const [showAll, setShowAll] = useState(false)
   const [selectedCertificate, setSelectedCertificate] = useState<string | null>(null)
   const [selectedProject, setSelectedProject] = useState<typeof portfolioItems[0] | null>(null)
 
-  const filteredItems = useMemo(() => {
-    if (activeFilter === "All") return portfolioItems
-    return portfolioItems.filter(item => item.category === activeFilter)
+  // Reset showAll when filter changes
+  useEffect(() => {
+    setShowAll(false)
   }, [activeFilter])
+
+  const filteredItems = useMemo(() => {
+    let items = portfolioItems
+    if (activeFilter !== "All") {
+      items = portfolioItems.filter(item => item.category === activeFilter)
+    }
+    
+    // Apply "See More" logic only when "All" is selected
+    if (activeFilter === "All" && !showAll) {
+      return items.slice(0, 6)
+    }
+    
+    return items
+  }, [activeFilter, showAll])
+
+  const hasMore = activeFilter === "All" && portfolioItems.length > 6 && !showAll
 
   return (
     <section id="work" className="py-24 px-6">
@@ -261,6 +335,19 @@ export function BentoGrid() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* See More Button */}
+        {hasMore && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-3 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all font-medium flex items-center gap-2"
+            >
+              See More Projects
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
 
         {/* Certificate Modal */}
         <AnimatePresence>

@@ -11,7 +11,6 @@ import { SectionIndicator } from "@/components/section-indicator"
 
 import { TrustSignals } from "@/components/trust-signals"
 import { Atmosphere } from "@/components/atmosphere"
-import { ROICalculator } from "@/components/roi-calculator"
 
 export default function Home() {
   return (
@@ -44,10 +43,6 @@ export default function Home() {
       <section id="work" className="bg-alternate">
         <BentoGrid />
       </section>
-
-      <div className="section-divider" />
-
-      <ROICalculator />
 
       <div className="section-divider" />
 

@@ -35,8 +35,7 @@ export function Atmosphere() {
         className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-900/10 blur-[150px] rounded-full"
       />
 
-      {/* Center Softener */}
-      <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-background/10" />
     </div>
   )
 }

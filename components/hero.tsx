@@ -1,11 +1,13 @@
 import { BookCallButton } from "@/components/book-call-button"
 import { Typewriter } from "@/components/typewriter"
 import { GradientSweep } from "@/components/gradient-sweep"
+import { HeaderBackground } from "@/components/header-background"
 import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+      <HeaderBackground />
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <p className="text-primary font-medium tracking-wide uppercase text-sm mb-6 animate-fade-in">
           E-Mail Marketing, Automation and Content powered by AI

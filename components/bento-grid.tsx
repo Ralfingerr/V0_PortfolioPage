@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 
 import { ProjectSidePanel } from "@/components/project-side-panel"
 
-const CATEGORIES = ["All", "Websites & Content", "Emails", "Automation", "Certificates"]
+const CATEGORIES = ["All", "Websites & Content", "Emails & Ads", "Automation", "Certificates"]
 
 const portfolioItems = [
   {
@@ -55,8 +55,8 @@ const portfolioItems = [
   },
   {
     id: "p3",
-    type: "Emails",
-    category: "Emails",
+    type: "Emails & Ads",
+    category: "Emails & Ads",
     title: "Buffalo Jerky",
     description: "Sustainable protein snacks with automated marketing campaigns and Black Friday strategies.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-buffalo-jerky.de.png-Mnpqh5rMywzBNzr5RVJdXMuaArRaSD.jpeg",
@@ -94,8 +94,8 @@ const portfolioItems = [
   },
   {
     id: "p5",
-    type: "Emails",
-    category: "Emails",
+    type: "Emails & Ads",
+    category: "Emails & Ads",
     title: "Gmail Campaign Suite",
     description: "Highly optimized Gmail-native email designs for maximum deliverability and engagement.",
     image: "/images/portfolio/screencapture-mail-google-mail-u-3-2026-05-11-12_00_54.png",
@@ -113,8 +113,8 @@ const portfolioItems = [
   },
   {
     id: "p6",
-    type: "Emails",
-    category: "Emails",
+    type: "Emails & Ads",
+    category: "Emails & Ads",
     title: "Black Friday Campaign",
     description: "Strategic Black Friday email campaign with high-converting layouts and urgency-driven design.",
     image: "/images/portfolio/BlackFriday_EmailKampagne.png",
@@ -127,6 +127,25 @@ const portfolioItems = [
         "120% lift in sales compared to previous year.",
         "Highest single-day revenue in brand history.",
         "Average open rate of 42% throughout the campaign."
+      ]
+    }
+  },
+  {
+    id: "p7",
+    type: "Emails & Ads",
+    category: "Emails & Ads",
+    title: "Meta Ads & Email Synergy",
+    description: "Integrated paid social and retention marketing campaign driving record ROI for a D2C jewelry brand.",
+    image: "/images/portfolio/google-analytics.png",
+    metric: "+320% Combined ROAS",
+    highlight: true,
+    details: {
+      challenge: "High cost-per-acquisition on Meta Ads and disconnected customer retention efforts.",
+      solution: "Aligning creative assets between Facebook Ads and Email flows, using Meta data to trigger personalized email sequences.",
+      results: [
+        "320% increase in combined ROAS within 90 days.",
+        "Halved customer acquisition costs through better retention loop.",
+        "Email revenue share increased from 15% to 35%."
       ]
     }
   },

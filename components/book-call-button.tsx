@@ -17,7 +17,7 @@ export function BookCallButton({
   variant = "default", 
   size = "default",
   className,
-  text = "Book Your Revenue Audit"
+  text = "Book a call"
 }: BookCallButtonProps) {
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || "#"
   const buttonRef = useRef<HTMLButtonElement>(null)

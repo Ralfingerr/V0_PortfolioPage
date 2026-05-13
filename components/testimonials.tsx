@@ -41,7 +41,7 @@ export function Testimonials() {
             Testimonials
           </p>
           <h2 className="font-serif text-3xl md:text-5xl font-semibold text-foreground mb-4">
-            Trusted by E-Commerce Leaders
+            trusted by online businesses
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Helping brands scale through intelligent automation and personalized marketing.

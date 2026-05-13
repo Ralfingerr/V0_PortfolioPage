@@ -24,7 +24,7 @@ export function Hero() {
         </h1>
         
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-pretty">
-          I help e-commerce brands eliminate manual tasks, scale operations, and unlock hidden revenue through intelligent automation systems.
+          I help businesses eliminate manual tasks, scale operations, and unlock revenue through intelligent automation systems.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

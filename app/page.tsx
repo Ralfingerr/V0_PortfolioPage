@@ -24,6 +24,7 @@ export default function Home() {
         <Hero />
       </section>
 
+      <div className="section-divider" />
       <TrustSignals />
 
       <div className="section-divider" />

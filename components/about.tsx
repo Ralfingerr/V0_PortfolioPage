@@ -37,7 +37,7 @@ export function About() {
               }}
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ralf_Profile-JqeusRMYfXP6HDW7xDDDh56iv8ody4.png"
+                src="/images/profile-new.jpg"
                 alt="Ralf Hillebrand"
                 width={320}
                 height={384}

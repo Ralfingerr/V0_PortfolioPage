@@ -9,7 +9,7 @@ const partners = [
   "Mailchimp", 
   "Google Analytics", 
   "Meta Business",
-  "Vercel",
+  "n8n",
   "Next.js"
 ]
 

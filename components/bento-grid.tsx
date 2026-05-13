@@ -15,8 +15,8 @@ const CATEGORIES = ["All", "Websites", "Emails", "Automation", "Certificates"]
 const portfolioItems = [
   {
     id: "p1",
-    type: "Emails",
-    category: "Emails",
+    type: "Websites",
+    category: "Websites",
     title: "Biotheke",
     description: "Organic meat e-commerce store with email marketing automation and customer retention flows.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-bio-theke-de-2026-03-20-14_25_42.png-wXgmtroSThY1LVzO6WUDSOiFGnhELj.jpeg",
@@ -74,6 +74,14 @@ const portfolioItems = [
     }
   },
   {
+    id: "c5",
+    type: "Certificates",
+    category: "Certificates",
+    title: "Klaviyo Product Certificate",
+    issuer: "Klaviyo Academy",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/klavyio_certificate-nAxf7lBBmUD5DAOhoA5EFfQI0SLsa3.png",
+  },
+  {
     id: "c1",
     type: "Certificates",
     category: "Certificates",
@@ -104,14 +112,6 @@ const portfolioItems = [
     title: "Mailchimp Email Campaigns",
     issuer: "Coursera",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/advanced_email_marketing_certificate_mailchimp-XHI1eii9UG0mTTTpAilegep5lFmvfi.jpg",
-  },
-  {
-    id: "c5",
-    type: "Certificates",
-    category: "Certificates",
-    title: "Klaviyo Product Certificate",
-    issuer: "Klaviyo Academy",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/klavyio_certificate-nAxf7lBBmUD5DAOhoA5EFfQI0SLsa3.png",
   },
 ]
 

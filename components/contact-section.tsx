@@ -51,7 +51,7 @@ export function ContactSection() {
               Let&apos;s Work Together
             </p>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              Ready to Transform Your E-commerce?
+              Ready to improve your Online Business?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Book a free strategy call to discuss how AI and automation can unlock new growth for your brand. No obligations, just actionable insights.

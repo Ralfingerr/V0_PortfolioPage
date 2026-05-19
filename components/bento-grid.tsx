@@ -117,8 +117,8 @@ const portfolioItems = [
     category: "Emails & Ads",
     title: "Black Friday Campaign",
     description: "Strategic Black Friday email campaign with high-converting layouts and urgency-driven design.",
-    image: "/images/portfolio/email_design.png",
-    metric: "+120% Sales Lift",
+    image: "/images/portfolio/email_design.jpg",
+    metric: "75% revenue increase",
     highlight: false,
     details: {
       challenge: "Cutting through the noise of the busiest shopping weekend of the year.",

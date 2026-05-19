@@ -23,9 +23,9 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: "Working with Ralf was a game-changer for our Black Friday strategy. +774% YoY ROI from email marketing alone. Truly an automation architect.",
+    quote: "With Ralfs help for our Black Friday Campaign, we could increase the monthly revenue by 75%. We were really happy with his work",
     name: "Founder",
-    company: "Buffalo Jerky",
+    company: "Fused-3D",
     role: "Operations Director",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ralf_Profile-JqeusRMYfXP6HDW7xDDDh56iv8ody4.png",
     rating: 5,
